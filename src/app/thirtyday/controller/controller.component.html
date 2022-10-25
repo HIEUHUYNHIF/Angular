@@ -1,0 +1,46 @@
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<!-- body -->
+<div class = "controller" #home (mouseenter)="autoChangeslide()" (mouseleave)="stopChangeslide()">
+    <div class = "icon">
+        <a class = "homeicon"  routerLink = "../" (click)="stopChangeslide()"><i class='bx bxs-home' ></i></a>
+        <a class = "gotop" (click) = "scrollView(home)"><i class='bx bx-arrow-to-top'></i></a>
+    </div>
+    <div class = "title"><p>THIRTYDAY</p></div>
+    <div class = "allday">
+        <div *ngFor="let day of images , let i=index">
+            <a class="day" [routerLink] = "day.path" (click)="scrollView(dayview)" >
+                <p>DAY<br>{{i+1}}</p>
+            </a>
+        </div>
+    </div> 
+    <div class = "demo" id="demo">
+        <div *ngFor="let image of images" >
+            <img (click)="scrollView(dayview)" [src] ="image.src" alt = "" [routerLink] = "image.path" class = "image image-disable-left">
+        </div>
+    <div>
+        <div *ngIf="imageLength <= 5" >
+            <div *ngFor="let dot of images">
+                <span class="dot dotNone"></span>
+            </div>
+
+        </div>
+        <div *ngIf="imageLength > 5" >
+            <div *ngFor="let dot of images">
+                <span class="dot dotHiddenR"></span>
+            </div>
+        </div>
+    </div>
+        <div class = "nextprev">
+            <span class = "next" (click)="clickNext()">
+                <i class='bx bx-right-arrow-alt'></i>
+            </span>
+            <span class = "prev" (click)="clickPrev()">
+                <i class='bx bx-left-arrow-alt'></i>
+            </span>
+        </div>
+    </div>
+</div>
+<router-outlet (activate)="scrollView(dayview)" #dayview></router-outlet>

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.bg{
+    position: relative;
+
+}
+.background{
+    background-image: linear-gradient(
+		45deg,
+		rgb(65, 88, 208) 0%,
+		rgb(200, 80, 192) 50%,
+		rgb(255, 204, 112) 100%
+	);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bgDisable{
+    opacity: 0.5;
+}
+.button{
+    padding: 20px;
+    background-color: beige;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.modal{
+    height: 200px;
+    width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    position: absolute;
+    transition: 0.5s;
+    left: 50%;
+    transform: translateX(-200px);
+}
+.disable{
+    visibility: hidden;
+    top: -200px;
+    opacity: 0;
+}
+.enable{
+    visibility: visible;
+    top: 150px;
+    opacity: 1;
+}
+
+.header{
+    background-color: #e26e70;;
+    height: 50px;
+    position: relative;
+    p{
+        height: 50px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    .iconClose{
+        position: absolute;
+        color: white;
+        font-size: 30px;
+        top:5px;
+        right: 10px;
+        cursor: pointer;
+    }
+}
+.bodytt{
+    background-color: white;
+    height: 350px;
+    p{
+        height: 50px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .buttonClose{
+        height: 35px;
+        width: 70px;
+        border-radius: 5px;
+        background-color: #e26e70;
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        p{
+            color: white;
+        }
+    }
+}

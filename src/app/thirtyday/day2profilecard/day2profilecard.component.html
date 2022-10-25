@@ -1,0 +1,22 @@
+<head>
+</head>
+<div class="backGround">
+    <div class="allCard" >
+        <div *ngFor="let item of images">
+            <div class="card">
+                <div class="avatar">
+                    <img [src]= "item.src" alt="">
+                </div>
+                <div class="name"><h2>{{item.name}}</h2></div>
+                <div class="info"><p>{{item.info}}</p></div>
+                <div class="link">
+                    <a [href]= "item.link"><fa-icon [icon]="faFacebook"></fa-icon></a>
+                    <a [href]= "item.link"><fa-icon [icon]="faYoutube"></fa-icon></a>
+                    <a [href]= "item.link"><fa-icon [icon]="faTiktok"></fa-icon></a>
+                    <a [href]= "item.link"><fa-icon [icon]="faGithub"></fa-icon></a>
+                </div>
+                <div class="buttom">Contact Me</div>
+            </div>
+        </div>
+    </div>
+</div>

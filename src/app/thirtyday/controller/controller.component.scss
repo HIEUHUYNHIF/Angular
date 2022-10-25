@@ -1,0 +1,240 @@
+// import
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.controller{
+    width: 100%;
+    height: 90vh;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    width: 60vw;height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+    }
+}
+.icon a{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #333;
+    border-radius: 50%;
+    font-size: 50px;
+    color: #fff;
+    transition: 0.15s;
+    transition-delay: 0.005;
+    z-index: 2;
+}
+
+.homeicon{
+    top: 2vh;
+    left: 1vw;
+    position: absolute;
+}
+
+.gotop{
+    top: 75vh;
+    right: 2vw;
+    position: fixed;
+}
+
+.icon a:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.allday{
+    width: 80vw;height: 20vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    a{  
+        width: 5vw;height: 5vh;
+        font-size: 15px;
+        margin: 3px; padding: 15px;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.15s;
+        transition-delay: 0.005;
+        p{
+            text-align: center;
+        }
+    }
+}
+.allday a:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.demo{
+    width: 50vw;
+    height: 50vh;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #272d40;
+    border: 3px solid #333;
+    margin-top: 3vh;
+    position: relative;
+
+}
+
+
+.image{
+    width: 100%;height: 100%;
+    object-fit: cover;
+    object-position:center;
+    position: absolute;
+    top: 0vh;
+    transition: 0.25s;
+}
+.image:hover{
+    cursor: pointer;
+}
+.image-enable{
+    opacity: 1;
+    right:0;
+    visibility: visible;
+
+}
+.image-disable-left{
+    opacity: 0;
+    visibility: hidden;
+    right:100%;
+}
+.image-disable-right{
+    opacity: 0;
+    visibility: hidden;
+    right:-100%;
+}
+
+.dot{
+    position: absolute;
+    border-radius: 50%;
+    transition: 0.25s;
+    bottom: 10px;
+}
+.dotL{
+    width: 10px;height: 10px;
+    left: 50%;
+    transform: translate(-5px,);
+}
+.dotLL{
+    width: 10px;height: 10px;
+    left: 50%;
+    transform: translate(-20px,);
+}
+.dotLR{
+    width: 10px;height: 10px;
+    left: 50%;
+    transform: translate(10px,);
+}
+.dotLR1{
+    width: 10px;height: 10px;
+    left: 50%;
+    transform: translate(25px,);
+}
+.dotLR2{
+    width: 10px;height: 10px;
+    left: 50%;
+    transform: translate(40px,);
+}
+.dotML{
+    width: 7.5px;height: 7.5px;
+    left: 50%;
+    transform: translate(-35px,-1.25px);
+}
+.dotMR{
+    width: 7.5px;height: 7.5px;
+    left: 50%;
+    transform: translate(25px,-1.25px);
+}
+.dotSL{
+    width: 5px;height: 5px;
+    left: 50%;
+    transform: translate(-50px,-2.5px);
+    visibility: visible;
+    opacity: 1;
+}
+.dotSR{
+    width: 5px;height: 5px;
+    left: 50%;
+    transform: translate(40px,-2.5px);
+    visibility: visible;
+    opacity: 1;
+}
+.dotHiddenL{
+    visibility: hidden;
+    opacity: 0;
+    width: 5px;height: 5px;
+    left: 50%;
+    transform: translate(-65px,-2.5px);
+}
+
+.dotHiddenR{
+    visibility: hidden;
+    opacity: 0;
+    width: 5px;height: 5px;
+    left: 50%;
+    transform: translate(55px,-2.5px);
+
+}
+.dotEnable{
+    background-color:#000;
+}
+.dotDisable{
+    background-color: #bbb;
+}
+
+.nextprev span{
+    color: #fff;
+    font-size: 40px;
+    background-color: #000;
+    padding: 5px;
+    border-style: double;
+    border-color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: 0.15s;
+    transition-delay: 0.005;
+    z-index: 1;
+}
+.next{
+    bottom: 22vh;
+    right: 1vw;
+}
+.prev{
+    bottom: 22vh;
+    left: 1vw;
+}
+.nextprev span:hover{
+    cursor: pointer;
+    transform: scale(0.95);
+}

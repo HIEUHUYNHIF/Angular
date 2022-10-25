@@ -1,0 +1,20 @@
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<div class="bg" (mouseleave)="closeModal()">
+<div class="background">
+    <div class="button" (click)="openModal()">
+        <h1>Open Modal</h1>
+    </div>  
+</div>
+<div class="modal disable">
+    <div class="header">
+        <p>Welcome</p>
+        <span class="iconClose" (click)="closeModal()"><i class='bx bx-x'></i></span>
+    </div>
+    <div class="bodytt">
+        <p>Hello</p>
+        <span class="buttonClose" (click)="closeModal()"><p>Close</p></span>
+    </div>
+</div>
+</div>
